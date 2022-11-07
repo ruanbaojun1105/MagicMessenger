@@ -75,15 +75,15 @@ public class BinderPool extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (intent != null) {
-            Bundle extras = intent.getExtras();
-            if (extras != null) {
-                Message message = Message.obtain(handler, Constant.SEND_MSG_TO_TARGET);
-                message.replyTo = messenger;
-                message.setData(extras);
-                sendMsg(message);
-            }
-        }
+//         if (intent != null) {
+//             Bundle extras = intent.getExtras();
+//             if (extras != null) {
+//                 Message message = Message.obtain(handler, Constant.SEND_MSG_TO_TARGET);
+//                 message.replyTo = messenger;
+//                 message.setData(extras);
+//                 sendMsg(message);
+//             }
+//         }
         return START_NOT_STICKY;
     }
 
